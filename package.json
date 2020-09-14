@@ -1,0 +1,24 @@
+{
+  "name": "tp1-engsoftware",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GiulioCastro/TP1-EngSoftware-Backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GiulioCastro/TP1-EngSoftware-Backend/issues"
+  },
+  "homepage": "https://github.com/GiulioCastro/TP1-EngSoftware-Backend#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.5",
+    "nodemon": "^2.0.4"
+  }
+}
