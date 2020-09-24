@@ -1,17 +1,18 @@
 const express = require('express');
+const cors = require('cors');
 const mongoose = require('mongoose');
 require('dotenv/config');
 
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 
 //IMPORT ROUTES
-const {HouseRoute, ApartmentRoute, AddressRoute} = require('./routes/');
+const {HouseRoute, ApartmentRoute} = require('./routes/');
 
 app.use('/houses', HouseRoute);
 app.use('/apartments', ApartmentRoute);
-app.use('/addresses', AddressRoute);
 
 //CONNECT TO DATABASE
 mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true, useUnifiedTopology: true }, (error) => {
