@@ -1,9 +1,11 @@
 const mongoose = require('mongoose');
 
+const Address = require('./address');
+
 const ApartmentSchema = mongoose.Schema({
-    _addressId: {
-        type: mongoose.Schema.Types.ObjectId,
-        required: false,
+    address: {
+        type: Address,
+        required: true,
     },
     roomsQuantity: {
         type: Number,
@@ -47,6 +49,10 @@ const ApartmentSchema = mongoose.Schema({
     },
     has24HourConcierge: {
         type: Boolean,
+        required: true,
+    },
+    rentValue: {
+        type: Number,
         required: true,
     },
     createdAt: {

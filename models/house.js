@@ -1,9 +1,11 @@
 const mongoose = require('mongoose');
 
+const Address = require('./address');
+
 const HouseSchema = mongoose.Schema({
-    _addressId: {
-        type: mongoose.Schema.Types.ObjectId,
-        required: false,
+    address: {
+        type: Address,
+        required: true,
     },
     roomsQuantity: {
         type: Number,
@@ -31,6 +33,10 @@ const HouseSchema = mongoose.Schema({
     },
     description: {
         type: String,
+        required: true,
+    },
+    rentValue: {
+        type: Number,
         required: true,
     },
     createdAt: {
