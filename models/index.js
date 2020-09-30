@@ -1,4 +1,5 @@
 module.exports = {
     House: require("./house"),
-    Apartment: require("./apartment")
+    Apartment: require("./apartment"),
+    Neighborhood: require("./neighborhood"),
 };

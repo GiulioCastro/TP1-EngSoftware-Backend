@@ -1,4 +1,5 @@
 module.exports = {
     HouseRoute: require("./house"),
-    ApartmentRoute: require("./apartment")
+    ApartmentRoute: require("./apartment"),
+    NeighborhoodRoute: require("./neighborhood"),
 };

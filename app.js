@@ -11,10 +11,11 @@ app.use(cors());
 app.use(express.json());
 
 //IMPORT ROUTES
-const {HouseRoute, ApartmentRoute} = require('./routes/');
+const {HouseRoute, ApartmentRoute, NeighborhoodRoute} = require('./routes/');
 
 app.use('/houses', HouseRoute);
 app.use('/apartments', ApartmentRoute);
+app.use('/neighborhoods', NeighborhoodRoute);
 
 //CONNECT TO DATABASE
 mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true, useUnifiedTopology: true }, (error) => {
